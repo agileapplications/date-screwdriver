@@ -1,0 +1,44 @@
+== date-screwdriver
+
+I needed an independent javascript library for date calculations.
+It also should feel nice to work with, thats why it is similar to the Rails Date Extension.
+
+
+= Usage
+
+Everything is done at instance level, so let's create a date instance:
+
+  var date = new Date();
+
+
+Convenience getters as entree:
+
+  date.isMonday();   
+  date.isThuesday(); 
+  date.isWednesday();
+  date.isThursday(); 
+  date.isFriday();   
+  date.isSaturday(); 
+  date.isSunday();   
+  
+  
+Convenience setters as main dish:
+  
+  date.lastDay();        
+  date.nextDay();        
+  date.yesterday();      
+  date.tomorrow();       
+  date.beginningOfWeek();
+  date.endOfWeek();      
+
+And some sweets for dessert:
+
+  date.toStringDBDate();                 // "2010-02-23"
+  date.toStringDayNumber();              // "09", "22", ...
+  date.toStringDayName();                // "Montag"
+  date.toStringDayAbbreviation();        // "Mo"
+
+
+= More to come...
+
+  I will add more to the menu on request.

@@ -1,10 +1,10 @@
-== date-screwdriver
+= date-screwdriver
 
 I needed an independent javascript library for date calculations.
 It also should feel nice to work with, thats why it is similar to the Rails Date Extension.
 
 
-= Usage
+== Usage
 
 Everything is done at instance level, so let's create a date instance:
 
@@ -39,6 +39,6 @@ And some sweets for dessert:
   date.toStringDayAbbreviation();        // "Mo"
 
 
-= More to come...
+== More to come...
 
 I will add more to the menu on request.

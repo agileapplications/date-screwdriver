@@ -34,7 +34,8 @@ Convenience setters as main dish:
 And some sweets for dessert:
 
   date.toStringDBDate();                 // "2010-02-23"
-  date.toStringDayNumber();              // "09", "22", ...
+  date.toStringDayNumber();              // 9, 22, ...
+  date.toStringDayNumberFixed();         // "09", "22", ...
   date.toStringDayName();                // "Montag"
   date.toStringDayAbbreviation();        // "Mo"
 

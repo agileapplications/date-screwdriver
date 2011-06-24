@@ -42,6 +42,10 @@ Date.prototype.isFriday = function()    { return this.getDay() == 5; }
 Date.prototype.isSaturday = function()  { return this.getDay() == 6; }
 Date.prototype.isSunday = function()    { return this.getDay() == 0; }
 
+Date.prototype.isToday = function() { 
+  return this.toStringDBDate() == new Date().toStringDBDate(); 
+}
+
 // OUTPUT FORMATTING
 Date.prototype.toStringDBDate = function(format) {
   var d = "0" + this.getDate();
@@ -57,9 +61,13 @@ Date.prototype.toStringDayName = function(format) {
   return y + "-" + m.slice(-2) + "-" + d.slice(-2);
 }
 
-Date.prototype.toStringDayNumber = function(format) {
+Date.prototype.toStringDayNumberFixed = function(format) {
   var d = "0" + this.getDate();
   return d.slice(-2);
+}
+
+Date.prototype.toStringDayNumber = function(format) {
+  return this.getDate();
 }
 
 Date.prototype.toStringDayName = function(format) {

@@ -10,12 +10,16 @@ Date.prototype.lastDay = function() {
 }
 
 Date.prototype.tomorrow = function() {
-  this.nextDay();
-  return this;
+  return this.nextDay();
 }
 
 Date.prototype.nextDay = function() {
   this.setDate(this.getDate() + 1 );
+  return this;
+}
+
+Date.prototype.lastWeek = function() {
+  this.setDate(this.getDate() - 7 );
   return this;
 }
 
@@ -30,6 +34,11 @@ Date.prototype.endOfWeek = function() {
   while(!this.isSunday()) {
     this.nextDay();
   }
+  return this;
+}
+
+Date.prototype.nextWeek = function() {
+  this.setDate(this.getDate() + 7 );
   return this;
 }
 
@@ -78,6 +87,11 @@ Date.prototype.toStringDayAbbreviation = function(format) {
   return Date.prototype.SHORTDAYNAMES[this.getDay()];
 }
 
+Date.prototype.toStringMonthAbbreviation = function(format) {
+  return Date.prototype.SHORTMONTHNAMES[this.getMonth()];
+}
+
 // I18N
 Date.prototype.DAYNAMES = [ "Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag" ];
 Date.prototype.SHORTDAYNAMES = [ "So", "Mo", "Di", "Mi", "Do", "Fr", "Sa" ];
+Date.prototype.SHORTMONTHNAMES = [ "Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez" ];
